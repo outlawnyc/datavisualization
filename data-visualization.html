@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+<canvas id="bar-chart" width="800" height="450"></canvas>
+<script>
+// Bar chart
+new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: ["1979", "1989", "1999", "2009", "2019"],
+      datasets: [
+        {
+          label: "NYC consumption (Million gallons per day)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [1512,1402,1237.2,1007.5, 987.4]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Water consumption in New York City 1979 - 2019'
+      }
+    }
+});
+</script>
+</body>
+</html>
